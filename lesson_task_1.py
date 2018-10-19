@@ -30,10 +30,10 @@ print("Your number -", sum1)
 numbers2 = int(input("Press button - 7 "))
 sum2 = numbers1 * 2
 print("Your number -", sum2)
-
+print()
 # Вариант Второй
-numbers1 = int(input("Enter number " ))
-if (numbers1 % 2) == 0:
-    print(numbers1 ** 2)
+num = int(input("Enter you number " ))
+if (num % 2) == 0:
+    print(num ** 2)
 else:
-    print(numbers1 * 2)
+    print(num * 2)
