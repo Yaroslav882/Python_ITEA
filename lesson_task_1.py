@@ -34,6 +34,6 @@ print()
 # Вариант Второй
 num = int(input("Enter you number " ))
 if (num % 2) == 0:
-    print(num ** 2)
+    print(num ** 0.5)
 else:
     print(num * 2)
