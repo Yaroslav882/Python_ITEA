@@ -9,11 +9,11 @@ def choice():
         if len(your_choice) == 0:
             print('Something went wrong, check your choice!')
             continue
-        if your_choice.lower() == 'Calculator':
+        if your_choice.lower() == 'calculator':
             simple_calculator()
-        elif your_choice.lower() == 'Square':
+        elif your_choice.lower() == 'square':
             square()
-        elif your_choice.lower() == 'Exit':
+        elif your_choice.lower() == 'exit':
             return
         else:
             print('Something went wrong, check your choice!')
