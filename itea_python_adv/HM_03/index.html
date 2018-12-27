@@ -6,14 +6,12 @@
   <body>
     <form action="" method="post">
       <p>{% csrf_token %}</p>
-      <!-- Добавьте поле для URL и кнопку для отправки формы. -->
       <p>The URL Shortener</p>
       <label for="url">URL</label>
       <input id="url" name="url" type="text" />
       <button id="submit" name="submit" type="submit">Shorten</button>
     </form>
-    <!-- Здесь выводите сообщение об ошибке или короткий URL. -->
-    <p>{{ message }}</p>
+    <p>{{ Message }}</p>
     <p><a href="{{ url }}">{{ url }}</a></p>
   </body>
 </html>
