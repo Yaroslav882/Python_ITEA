@@ -2,6 +2,7 @@ from django.conf import settings
 from django.conf.urls import url
 from django.core.cache import cache
 from django.shortcuts import redirect, render
+from django.urls import path, re_path
 
 from random import choice
 from string import ascii_letters
@@ -77,16 +78,18 @@ def redirect_view(request, key):
 
 
 def stats(request, key):
-    try:
-        result = stats_dict[key]
-    except:
-        result = 0
-    return render(request, 'index.html', {'form_count': result})
+    """
+    Статистика кликов на сокращенные ссылки.
+    В теле ответа функция возращает количество
+    переходов по данному коду.
+    """
+    pass
 
 
 urlpatterns = [
-    url(r'^$', index),
-    url(r'^([\w]*)$', redirect_view)
+    path('', index),
+    re_path(r'^(?P<key>\w+)$', redirect_view),
+    re_path(r'^(?P<key>\w+)/stats$', stats),
 ]
 
 
