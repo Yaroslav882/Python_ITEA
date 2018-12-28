@@ -63,7 +63,7 @@ def index(request):
         contex = {}
         url = request.POST.get('url')
         result = urlparse(url)
-        if result.dcheme in ALLOWED_SCHEMES:
+        if result.scheme in ALLOWED_SCHEMES:
             key = random_key()
             cache.add(key, url)
             contex['url'] = key
